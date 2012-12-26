@@ -101,7 +101,39 @@ Save the JSON text below into a text file and save it as "test.json".  If you wi
 
 You can read the full description of the envelope in the Learning Registry Technical Specification document.
 
-.. literalinclude:: sample.json
+.. code-block:: json
+
+   {
+       "TOS": {
+           "submission_TOS": "http://www.learningregistry.org/tos/cc0/v0-5/"
+       },
+       "active": true,
+       "doc_type": "resource_data",
+       "doc_version": "0.23.0",
+       "identity": {
+           "curator": "",
+           "owner": "",
+           "submitter": "your name or organization here",
+           "signer": "your name or org, if you're signing the document",
+           "submitter_type": "agent"
+       },
+       "keys": [
+           "science",
+           "Newton",
+           "apple",
+           "what_ever_you_want"
+       ],
+       "payload_placement": "inline",
+       "payload_schema": [
+           "hashtags",
+           "describing",
+           "resource_locator",
+           "format"
+       ],
+       "resource_data": "Put_anything_like_metadata, xml_or_whatever_here",
+       "resource_data_type": "metadata",
+       "resource_locator": "URI_of_resource"
+   }
 
 You're now ready to sign this document with LRSignature.
 
